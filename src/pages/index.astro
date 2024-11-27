@@ -14,10 +14,10 @@ const allProducts = await getCollection("store");
     <div class="mx-auto max-w-3xl px-8 py-12">
       <h2
         class="text-2xl font-medium tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
-        Hire me
+        Interests
       </h2>
       <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">
-        I am available for freelance work in the following areas:
+        I am interested in the following areas:
       </p>
       <div class="border-t dark:border-neutral-700 pt-12 mt-4">
         <p class="text-neutral-500 text-sm text-pretty dark:text-neutral-400">
@@ -28,11 +28,10 @@ const allProducts = await getCollection("store");
         <ul
           class="mt-4 text-neutral-500 list-disc text-sm list-inside dark:text-neutral-400"
           role="list">
-          <li>UI/UX Design</li>
-          <li>Full-Stack Development</li>
-          <li>Branding</li>
-          <li>BrContent Strategy anding</li>
-          <li>Branding</li>
+          <li>Web Development</li>
+          <li>Machine Learning</li>
+          <li>IOS Development</li>
+          <li>Cloud Computing</li>
         </ul>
         <div
           class="flex flex-wrap border-t justify-end dark:border-neutral-700 pt-6 mt-6">
@@ -47,41 +46,7 @@ const allProducts = await getCollection("store");
       </div>
     </div>
   </section>
-  <section>
-    <div class="mx-auto max-w-3xl px-8 py-12">
-      <h2
-        class="text-2xl font-medium tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
-        Products of the week
-      </h2>
-      <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">
-        Check out my newest blog posts and discover the latest insights and
-        trends.
-      </p>
-      <div
-        class="grid md:grid-cols-2 mt-4 gap-12 gap-y-24 gap-x-6 border-t dark:border-neutral-700 pt-12">
-        {
-          allProducts.slice(0, 2).map((post) => (
-            <WeekProduct
-              url={"/store/" + post.slug}
-              price={post.data.price}
-              title={post.data.title}
-              description={post.data.description}
-              alt={post.data.title}
-              image={post.data.image.url}
-            />
-          ))
-        }
-      </div>
-      <div
-        class="flex flex-wrap border-t justify-end dark:border-neutral-700 pt-6 mt-6">
-        <a
-          class="text-sm text-neutral-500 hover:text-blue-400 dark:text-neutral-50 group duration-200"
-          href="/store/home">
-          See all products &rarr;
-        </a>
-      </div>
-    </div>
-  </section>
+
   <section>
     <div class="mx-auto max-w-3xl px-8 py-12">
       <h2
